@@ -4,9 +4,8 @@ let mongoose = require('mongoose')
 let app = require('./app')
 let config = require('./config')
 
-/* url test -> mongodb://localhost:27017/Portafolio */
-const mongodbUri = `mongodb+srv://${config.DDBB.USER}:${config.DDBB.PASS}@cluster0-zpknf.mongodb.net/
-${config.DDBB.NAME}?retryWrites=true&w=majority`
+
+const mongodbUri = config.MONGODB_TEST
 
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise
